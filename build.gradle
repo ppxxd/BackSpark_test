@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.7.18'
+}
+
+group = 'com.ppxxd'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter:2.7.18'
+    compileOnly 'com.opencsv:opencsv:5.9'
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.7.18'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.7.18'
+    implementation 'org.postgresql:postgresql:42.7.3'
+    implementation 'org.slf4j:slf4j-api:2.0.13'
+    implementation 'org.springdoc:springdoc-openapi-ui:1.7.0'
+
+
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.18'
+    testImplementation 'org.slf4j:slf4j-api:2.0.13'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testCompileOnly 'org.projectlombok:lombok:1.18.20'
+    testImplementation 'com.opencsv:opencsv:5.9'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
+    testImplementation 'com.h2database:h2:2.2.224'
+    testImplementation 'org.slf4j:slf4j-api:2.0.13'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
