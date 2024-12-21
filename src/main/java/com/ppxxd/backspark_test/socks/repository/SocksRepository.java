@@ -1,6 +1,5 @@
 package com.ppxxd.backspark_test.socks.repository;
 
-import com.ppxxd.backspark_test.socks.enums.FilterOperations;
 import com.ppxxd.backspark_test.socks.model.Socks;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
